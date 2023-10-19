@@ -1,0 +1,39 @@
+:root {
+  --clr-primary-400: hsl(240, 7%, 8%, 100%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%, 100%);
+  --clr-neutral-200: hsl(255, 6%, 88%, 100%);
+  --clr-neutral-300: hsl(191, 6%, 75%, 100%);
+  --clr-neutral-400: hsl(225, 3%, 29%, 100%);
+
+  --ff-primary: 'Poppins', sans-serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.25rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+  --fs-900: 2.25rem;
+
+  --fs-button: var(--fs-400);
+  --fs-testimonial-quote: var(--fs-400);
+  --fs-testimonial-author: var(--fs-400);
+  --fs-plan-month: var(--fs-400);
+  --fs-accordion-question: var(--fs-500);
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-800: 3rem;
+    --fs-900: 4rem;
+    --fs-button: var(--fs-500);
+    --fs-testimonial-quote: var(--fs-600);
+    --fs-testimonial-author: var(--fs-500);
+    --fs-plan-month: var(--fs-600);
+    --fs-accordion-question: var(--fs-600);
+  }
+}
