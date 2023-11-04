@@ -23,12 +23,18 @@
     <!-- styles -->
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- JS -->
+    <script src="main.js" defer></script>
   </head>
   <body>
+    <!-- HEADER -->
     <header class="primary-header">
       <div class="container">
         <div class="nav-wrapper">
-          <a href="#" class="logo"> Growth </a>
+          <div>
+            <img src="images/logo.png" alt="Growth logo" />
+          </div>
           <nav>
             <ul role="list" class="primary-navigation">
               <li>Features</li>
@@ -42,115 +48,176 @@
         </div>
       </div>
     </header>
-    <body>
-      <main>
-        <section class="hero-section container text-center">
-          <h1>A powerful solution to grow your your startup. Fast!</h1>
-          <div class="grid">
-            <p>
-              Organise, collaborate, and track progress seamlessly with our
-              one-stop-shop startup growth tool.
-            </p>
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero-section container text-center">
+        <h1>A powerful solution to grow your your startup. Fast!</h1>
+        <div class="grid">
+          <p>
+            Organise, collaborate, and track progress seamlessly with our
+            one-stop-shop startup growth tool.
+          </p>
+          <div class="btn-wrapper">
             <button class="btn primary-btn">Get started</button>
             <button class="btn secondary-btn btn" data-icon="camera">
               Book a demo
             </button>
           </div>
-          <picture class="hero-section__image">
-            <source
-              srcset="assets/hero-bg-desktop.png"
-              media="(min-width: 800px)"
-            />
-            <img src="assets/hero-bg-mobile.png" alt="" />
-          </picture>
-        </section>
+        </div>
+        <picture class="hero-section__image">
+          <source
+            srcset="images/hero-bg-desktop.png"
+            media="(min-width: 800px)"
+          />
+          <img src="images/hero-bg-mobile.png" alt="Growth overview" />
+        </picture>
+      </section>
 
-        <section class="video-section text-center container-sm">
-          <div class="grid">
-            <h2 class="secondary-heading">
-              See how it works and get started in less than 2 minutes
-            </h2>
-            <img src="assets/Video.png" alt="video" />
+      <!-- VIDEO SECTION -->
+      <section class="video-section text-center">
+        <div class="grid">
+          <h2 class="secondary-heading">
+            See how it works and get started in less than 2 minutes
+          </h2>
+          <img src="images/Video.png" alt="video" />
+          <button class="btn primary-btn">Get started</button>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS SECTION -->
+      <section class="testimonials-section container">
+        <h2 class="secondary-heading">
+          Don't just take our word for it, see the success stories from
+          businesses just like yours.
+        </h2>
+        <div class="testimonials-wrapper grid">
+          <div class="testimonial">
+            <div class="testimonial-content grid">
+              <blockquote class="italic">
+                “Our business has seen a significant increase in productivity
+                since we started using the Growth app.”
+              </blockquote>
+              <div>
+                <p class="quote-author">Katherine Smith</p>
+                <p>Capodopera</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial-content grid">
+              <blockquote class="italic">
+                “As a small business owner, it's important to have a tool that
+                can help me keep track of everything. The Growth app has been a
+                lifesaver for me, allowing me to manage my contacts, schedule
+                appointments, and track progress all in one place.”
+              </blockquote>
+              <div>
+                <p class="quote-author">Jonathan Lee</p>
+                <p>Red Bolt</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial-content grid">
+              <blockquote class="italic">
+                “The dashboards and reporting feature has provided valuable
+                insights into our performance and helped us make data-driven
+                decisions. It's a game changer for us.”
+              </blockquote>
+              <div>
+                <p class="quote-author">David Wilson</p>
+                <p>Slide</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial-content grid">
+              <blockquote class="italic">
+                “Our business has seen a significant increase in productivity
+                since we started using the Growth app.”
+              </blockquote>
+              <div>
+                <p class="quote-author">Katherine Smith</p>
+                <p>Capodopera</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING PLANS SECTION -->
+      <section class="pricing-section text-center container">
+        <h2 class="secondary-heading">Pricing</h2>
+        <p>
+          Start free and scale while you grow. No hidden fees. Unlimited users
+          for free.
+        </p>
+        <div class="pricing grid">
+          <div class="plan plan__simple grid">
+            <div>
+              <h4 class="plan__title">Simple</h4>
+              <p class="plan__description">
+                Keep track of your contacts, gain valuable insights, analyse
+                live data and performance metrics.
+              </p>
+            </div>
+            <div>
+              <p class="plan__price">
+                Free<span data-cost="free">*No credit card required</span>
+              </p>
+            </div>
+            <div class="divider"></div>
+            <div>
+              <ul>
+                <li>Real-time monitoring</li>
+                <li>Track key performance indicators</li>
+                <li>Schedule appointments</li>
+                <li>Organize, delegate and keep track of tasks</li>
+              </ul>
+            </div>
             <button class="btn primary-btn">Get started</button>
           </div>
-        </section>
 
-        <section class="testimonials-section container">
-          <h2 class="secondary-heading">
-            Don't just take our word for it, see the success stories from
-            businesses just like yours.
-          </h2>
-          <div class="testimonials-wrapper grid">
-            <div class="testimonial">
-              <div class="testimonial-content grid">
-                <blockquote class="italic">
-                  “Our business has seen a significant increase in productivity
-                  since we started using the Growth app.”
-                </blockquote>
-                <div>
-                  <p class="quote-author">Katherine Smith</p>
-                  <p>Capodopera</p>
-                </div>
-              </div>
+          <div class="plan plan__premium grid">
+            <div>
+              <h4 class="plan__title">Premium</h4>
+              <p class="plan__description">
+                Keep track of your contacts, gain valuable insights, analyse
+                live data and performance metrics.
+              </p>
             </div>
-
-            <div class="testimonial">
-              <div class="testimonial-content grid">
-                <blockquote class="italic">
-                  “As a small business owner, it's important to have a tool that
-                  can help me keep track of everything. The Growth app has been
-                  a lifesaver for me, allowing me to manage my contacts,
-                  schedule appointments, and track progress all in one place.”
-                </blockquote>
-                <div>
-                  <p class="quote-author">Jonathan Lee</p>
-                  <p>Red Bolt</p>
-                </div>
-              </div>
+            <div>
+              <p class="plan__price">$49<span>/month</span></p>
             </div>
-
-            <div class="testimonial">
-              <div class="testimonial-content grid">
-                <blockquote class="italic">
-                  “The dashboards and reporting feature has provided valuable
-                  insights into our performance and helped us make data-driven
-                  decisions. It's a game changer for us.”
-                </blockquote>
-                <div>
-                  <p class="quote-author">David Wilson</p>
-                  <p>Slide</p>
-                </div>
-              </div>
+            <div class="divider"></div>
+            <div>
+              <p>Everything from the free plan plus:</p>
+              <ul>
+                <li>Data-driven decisions</li>
+                <li>Data-visualization</li>
+                <li>Track key performance indicators</li>
+                <li>Schedule appointments</li>
+                <li>Store and organise contact information</li>
+                <li>
+                  Real-time communication tools for messaging and video
+                  conferencing
+                </li>
+              </ul>
             </div>
-
-            <div class="testimonial">
-              <div class="testimonial-content grid">
-                <blockquote class="italic">
-                  “Our business has seen a significant increase in productivity
-                  since we started using the Growth app.”
-                </blockquote>
-                <div>
-                  <p class="quote-author">Katherine Smith</p>
-                  <p>Capodopera</p>
-                </div>
-              </div>
-            </div>
+            <button class="btn primary-btn">Get started</button>
           </div>
-        </section>
-
-        <section class="pricing-section text-center grid">
-          <div>
-            <h2 class="secondary-heading">Pricing</h2>
-            <p>
-              Start free and scale while you grow. No hidden fees. Unlimited
-              users for free.
-            </p>
-          </div>
-          <div class="plans-wrapper grid container-sm"></div>
-        </section>
-      </main>
-    </body>
-
-    <script type="module" src="/main.js"></script>
+        </div>
+        <p>
+          All prices are in USD and charged per month with applicable taxes
+          added at checkout.
+        </p>
+        <a data-icon="arrow">View features</a>
+      </section>
+      <div class="divider"></div>
+    </main>
   </body>
 </html>
