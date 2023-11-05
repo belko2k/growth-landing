@@ -37,3 +37,9 @@
     --fs-accordion-question: var(--fs-600);
   }
 }
+
+.arrow-icon {
+  display: inline-flex;
+  width: 1rem;
+  aspect-ratio: 1;
+}
