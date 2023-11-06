@@ -43,9 +43,9 @@
   }
 }
 
-* {
+/* * {
   outline: 1px solid purple;
-}
+} */
 
 body {
   font-family: var(--ff-primary);
@@ -102,11 +102,44 @@ body {
   max-width: 47ch;
 }
 
-.hero-section__image img {
-  margin-top: 3.75rem;
+.hero-section .btn-wrapper {
+  gap: 1rem;
 }
 
-@media (min-width: 900px) {
+.hero-section .btn-wrapper button[data-icon='camera'] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+.hero-section .btn-wrapper button[data-icon='camera']::before {
+  content: '';
+  background-image: url(../images/book-a-demo-icon.svg);
+  width: 18px;
+  height: 22px;
+}
+
+.hero-section__image {
+  justify-content: center;
+  /* margin-top: -9rem; */
+}
+
+@media (max-width: 450px) {
+  .hero-section .btn-wrapper {
+    gap: 1.1875rem;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-section__image {
+    margin-top: 3.75rem;
+  }
+}
+
+@media (min-width: 1000px) {
   .hero-section {
     text-align: left;
     padding-block: 4.5rem;
@@ -118,6 +151,10 @@ body {
 
   .hero-section p:first-of-type {
     margin-block: 1.5rem 2.5rem;
+  }
+
+  .hero-section__image {
+    margin-top: -9rem;
   }
 }
 
