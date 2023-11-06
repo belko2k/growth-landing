@@ -1,10 +1,15 @@
 :root {
-  --clr-primary-400: hsl(240, 7%, 8%, 100%);
+  --clr-primary-100: hsl(216, 70%, 92%, 100%);
+  --clr-primary-400: hsl(216, 100%, 64%, 100%);
+  --clr-primary-500: hsl(216, 95%, 53%, 100%);
 
   --clr-neutral-100: hsl(0, 0%, 100%, 100%);
-  --clr-neutral-200: hsl(255, 6%, 88%, 100%);
-  --clr-neutral-300: hsl(191, 6%, 75%, 100%);
-  --clr-neutral-400: hsl(225, 3%, 29%, 100%);
+  --clr-neutral-200: hsl(0, 0%, 96%, 100%);
+  --clr-neutral-300: hsl(225, 6%, 88%, 100%);
+  --clr-neutral-400: hsl(189, 6%, 75%, 100%);
+  --clr-neutral-500: hsl(191, 6%, 75%, 100%);
+  --clr-neutral-600: hsl(225, 3%, 29%, 100%);
+  --clr-neutral-900: hsl(240, 7%, 8%, 100%);
 
   --ff-primary: 'Poppins', sans-serif;
 
