@@ -30,8 +30,9 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
+  vertical-align: middle;
   max-width: 100%;
+  font-style: italic;
 }
 /*
   6. Remove built-in form typography styles

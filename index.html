@@ -52,29 +52,33 @@
     <main>
       <!-- HERO SECTION -->
       <section class="hero-section container bg-light">
-        <div class="hero-section__content flex">
-          <h1 class="primary-heading">
-            A powerful solution to grow your startup. Fast!
-          </h1>
-          <p>
-            Organise, collaborate, and track progress seamlessly with our
-            one-stop-shop startup growth tool.
-          </p>
-          <div class="btn-wrapper flex">
-            <button class="btn primary-btn bg-blue">Get started</button>
-            <button class="btn secondary-btn" data-icon="camera">
-              Book a demo
-            </button>
+        <div class="stacked">
+          <div class="hero-section__content flex">
+            <h1 class="primary-heading">
+              A powerful solution to grow your startup. Fast!
+            </h1>
+            <p>
+              Organise, collaborate, and track progress seamlessly with our
+              one-stop-shop startup growth tool.
+            </p>
+            <div class="btn-wrapper flex">
+              <button class="btn primary-btn bg-blue">Get started</button>
+              <button class="btn secondary-btn" data-icon="camera">
+                <svg class="camera-icon">
+                  <use xlink:href="images/camera.svg#camera"></use></svg
+                >Book a demo
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="hero-section__image grid">
-          <picture>
-            <source
-              srcset="images/hero-bg-desktop.png"
-              media="(min-width: 700px)"
-            />
-            <img src="images/hero-bg-mobile.png" alt="Growth overview" />
-          </picture>
+          <div class="hero-section__image grid">
+            <picture>
+              <source
+                srcset="images/hero-bg-desktop.png"
+                media="(min-width: 700px)"
+              />
+              <img src="images/hero-bg-mobile.png" alt="Growth overview" />
+            </picture>
+          </div>
         </div>
       </section>
 

@@ -81,8 +81,12 @@ body {
 
 .hero-section {
   padding-block: 3.5rem 2rem;
-
   text-align: center;
+}
+
+.stacked > * {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
 }
 
 .hero-section__content {
@@ -115,17 +119,19 @@ body {
   gap: 0.625rem;
 }
 
-.hero-section .btn-wrapper button[data-icon='camera']::before {
-  content: '';
-  background-image: url(../images/book-a-demo-icon.svg);
+.hero-section .btn-wrapper button[data-icon='camera'] .camera-icon {
   width: 18px;
-  height: 22px;
+  height: 21px;
+  stroke: var(--clr-neutral-900);
 }
 
-.hero-section__image {
-  justify-content: center;
-  /* margin-top: -9rem; */
+.hero-section .btn-wrapper button[data-icon='camera']:hover .camera-icon {
+  stroke: var(--clr-neutral-100);
 }
+
+/* .hero-section__image {
+  justify-content: center;
+} */
 
 @media (max-width: 450px) {
   .hero-section .btn-wrapper {
@@ -136,9 +142,9 @@ body {
 }
 
 @media (max-width: 700px) {
-  .hero-section__image {
+  /* .hero-section__image {
     margin-top: 3.75rem;
-  }
+  } */
 }
 
 @media (min-width: 1000px) {
@@ -156,9 +162,9 @@ body {
     margin-block: 1.5rem 2.5rem;
   }
 
-  .hero-section__image {
+  /* .hero-section__image {
     margin-top: -9rem;
-  }
+  } */
 }
 
 /* VIDEO SECTION */
@@ -291,6 +297,12 @@ body {
   background-color: var(--clr-neutral-200);
   border-radius: 0.75rem;
   padding: 0.75rem 1.5rem;
+}
+
+.secondary-btn:hover,
+.secondary-btn-sm:hover {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
 }
 
 /* Backgrounds */
