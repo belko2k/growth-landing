@@ -4,6 +4,7 @@
   --clr-primary-500: hsl(216, 95%, 53%, 100%);
 
   --clr-neutral-100: hsl(0, 0%, 100%, 100%);
+  --clr-neutral-150: hsl(0, 0%, 98%, 100%);
   --clr-neutral-200: hsl(0, 0%, 96%, 100%);
   --clr-neutral-300: hsl(225, 6%, 88%, 100%);
   --clr-neutral-400: hsl(189, 6%, 75%, 100%);
@@ -16,8 +17,9 @@
 
   --ff-primary: 'Poppins', sans-serif;
 
-  --fw-light: 300;
-  --fw-regular: 400;
+  --fw-regular: 300;
+  --fw-medium: 400;
+  --fw-bold: 700;
 
   --fs-300: 0.875rem;
   --fs-400: 1rem;
@@ -44,13 +46,14 @@
     --fs-accordion-question: var(--fs-600);
   }
 }
-
-/* * {
+/* 
+* {
   outline: 1px solid purple;
 } */
 
 body {
   font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
   color: var(--clr-neutral-900);
 }
 
@@ -69,6 +72,7 @@ body {
 }
 
 .primary-navigation li a {
+  font-weight: var(--fw-medium);
   text-decoration: none;
   color: var(--clr-neutral-900);
 }
@@ -80,6 +84,7 @@ body {
 /* HERO SECTION */
 
 .hero-section {
+  isolation: isolate;
   padding-block: 3.5rem 2rem;
   text-align: center;
 }
@@ -92,13 +97,14 @@ body {
 
 .hero-section .primary-heading {
   font-size: clamp(var(--fs-900), 1.696rem + 2.954vw, 4rem);
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-medium);
   line-height: 1.1;
   max-width: 23ch;
 }
 
 .hero-section p:first-of-type {
   margin-block: 1rem 2rem;
+  font-weight: var(--fw-regular);
   font-size: var(--fs-500);
   line-height: 1.6;
   max-width: 47ch;
@@ -205,6 +211,58 @@ body {
   padding-bottom: 4rem;
 }
 
+.testimonials-section .secondary-heading {
+  max-width: 27ch;
+}
+
+.testimonials-section .testimonials-wrapper {
+  margin-top: 2.5rem;
+  gap: 2rem;
+}
+
+.testimonials-section .testimonials-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonials-section .testimonial {
+  background-color: var(--clr-neutral-150);
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+}
+
+.testimonials-section .testimonial blockquote {
+  font-size: var(--fs-testimonial-quote);
+  margin-bottom: 1.25rem;
+}
+
+.testimonials-section .quote-author {
+  font-size: var(--fs-testimonial-author);
+  font-weight: var(--fw-medium);
+}
+
+@media (min-width: 550px) {
+  .testimonials-section .testimonials-wrapper {
+    grid-template-columns: repeat(4, 405px);
+    gap: 1.5rem;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    margin-top: 4rem;
+    cursor: grab;
+  }
+
+  .testimonials-section .testimonial {
+    padding: 2.5rem;
+    height: fit-content;
+    scroll-snap-align: start;
+  }
+
+  .testimonials-section .testimonial blockquote {
+    margin-bottom: 3rem;
+  }
+}
+
 @media (min-width: 1000px) {
   .testimonials-section {
     padding-bottom: 6rem;
@@ -262,6 +320,7 @@ body {
 .btn {
   border: none;
   cursor: pointer;
+  font-weight: var(--fw-medium);
 }
 
 .primary-btn {
@@ -317,10 +376,15 @@ body {
 
 .secondary-heading {
   font-size: var(--fs-800);
+  font-weight: var(--fw-medium);
 }
 
 .secondary-heading[data-clr='white'] {
   color: var(--clr-neutral-100);
-  line-height: 1.1;
-  font-weight: var(--fw-regular);
+  line-height: 1.2;
+  font-weight: var(--fw-medium);
+}
+
+.italic {
+  font-style: italic;
 }
