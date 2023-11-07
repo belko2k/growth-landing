@@ -11,6 +11,9 @@
   --clr-neutral-600: hsl(225, 3%, 29%, 100%);
   --clr-neutral-900: hsl(240, 7%, 8%, 100%);
 
+  --clr-divider-dark: hsl(0, 0%, 29%, 100%);
+  --clr-divider-light: hsl(240, 7%, 92%, 100%);
+
   --ff-primary: 'Poppins', sans-serif;
 
   --fw-light: 300;
@@ -31,10 +34,9 @@
   --fs-accordion-question: var(--fs-500);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   :root {
     --fs-800: 3rem;
-    /* --fs-900: 4rem; */
     --fs-button: var(--fs-500);
     --fs-testimonial-quote: var(--fs-600);
     --fs-testimonial-author: var(--fs-500);
@@ -97,7 +99,7 @@ body {
 
 .hero-section p:first-of-type {
   margin-block: 1rem 2rem;
-  font-size: var(--fs-600);
+  font-size: var(--fs-500);
   line-height: 1.6;
   max-width: 47ch;
 }
@@ -150,11 +152,60 @@ body {
   }
 
   .hero-section p:first-of-type {
+    font-size: var(--fs-600);
     margin-block: 1.5rem 2.5rem;
   }
 
   .hero-section__image {
     margin-top: -9rem;
+  }
+}
+
+/* VIDEO SECTION */
+
+.video-section {
+  padding-top: 4rem;
+}
+
+.video-section__content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-section .secondary-heading {
+  text-align: center;
+  max-width: 27ch;
+}
+
+.video-section__video {
+  margin-block: 2.5rem;
+}
+
+@media (max-width: 450px) {
+  .video-section button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .video-section {
+    padding-top: 6rem;
+  }
+
+  .video-section__video {
+    margin-block: 2.75rem 4rem;
+  }
+}
+
+/* TESTIMONIALS SECTION */
+
+.testimonials-section {
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 1000px) {
+  .testimonials-section {
+    padding-bottom: 6rem;
   }
 }
 
@@ -176,6 +227,32 @@ body {
 
 .flex {
   display: flex;
+}
+
+/* DIVIDERS */
+
+.divider-wrapper {
+  background-color: var(--clr-neutral-900);
+  padding-block: 4rem;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+}
+
+.divider[data-type='dark'] {
+  background-color: var(--clr-divider-dark);
+}
+
+.divider[data-type='light'] {
+  background-color: var(--clr-divider-light);
+}
+
+@media (min-width: 1000px) {
+  .divider-wrapper {
+    padding-block: 6rem;
+  }
 }
 
 /* Buttons */
@@ -228,4 +305,14 @@ body {
 
 .bg-blue {
   background-color: var(--clr-primary-400);
+}
+
+.secondary-heading {
+  font-size: var(--fs-800);
+}
+
+.secondary-heading[data-clr='white'] {
+  color: var(--clr-neutral-100);
+  line-height: 1.1;
+  font-weight: var(--fw-regular);
 }
