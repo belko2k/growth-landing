@@ -156,13 +156,13 @@
 
       <!-- PRICING PLANS SECTION -->
       <section class="pricing-section container bg-light">
-        <h2 class="secondary-heading">Pricing</h2>
-        <p>
+        <h2 class="secondary-heading text-center">Pricing</h2>
+        <p class="pricing-section__desc text-center">
           Start free and scale while you grow. No hidden fees. Unlimited users
           for free.
         </p>
         <div class="pricing grid">
-          <div class="plan plan__simple grid">
+          <div class="plan plan__simple">
             <div>
               <h3 class="plan__title">Simple</h3>
               <p class="plan__description">
@@ -170,23 +170,26 @@
                 live data and performance metrics.
               </p>
             </div>
-            <div>
-              <p class="plan__price">
-                Free<span data-cost="free">*No credit card required</span>
-              </p>
+            <div class="plan__price">
+              <p data-type="price" class="hidden">Free</p>
+              <p data-payment="free">*No credit card required</p>
             </div>
-            <div class="divider"></div>
-            <div>
+            <div class="divider" data-type="light"></div>
+            <div class="plan__list">
               <ul>
-                <li>Real-time monitoring</li>
-                <li>Track key performance indicators</li>
-                <li>Schedule appointments</li>
-                <li>Organize, delegate and keep track of tasks</li>
+                <li data-icon="check-light">Real-time monitoring</li>
+                <li data-icon="check-light">
+                  Track key performance indicators
+                </li>
+                <li data-icon="check-light">Schedule appointments</li>
+                <li data-icon="check-light">
+                  Organize, delegate and keep track of tasks
+                </li>
               </ul>
             </div>
             <button class="btn primary-btn bg-blue">Get started</button>
           </div>
-          <div class="plan plan__premium grid">
+          <div class="plan plan__premium">
             <div>
               <h3 class="plan__title">Premium</h3>
               <p class="plan__description">
@@ -194,19 +197,22 @@
                 live data and performance metrics.
               </p>
             </div>
-            <div>
-              <p class="plan__price">$49<span>/month</span></p>
+            <div class="plan__price">
+              <p data-type="price">$49</p>
+              <p data-payment="per month">/month</p>
             </div>
-            <div class="divider"></div>
-            <div>
+            <div class="divider" data-type="dark"></div>
+            <div class="plan__list">
               <p>Everything from the free plan plus:</p>
               <ul>
-                <li>Data-driven decisions</li>
-                <li>Data-visualization</li>
-                <li>Track key performance indicators</li>
-                <li>Schedule appointments</li>
-                <li>Store and organise contact information</li>
-                <li>
+                <li data-icon="check-dark">Data-driven decisions</li>
+                <li data-icon="check-dark">Data-visualization</li>
+                <li data-icon="check-dark">Track key performance indicators</li>
+                <li data-icon="check-dark">Schedule appointments</li>
+                <li data-icon="check-dark">
+                  Store and organise contact information
+                </li>
+                <li data-icon="check-dark">
                   Real-time communication tools for messaging and video
                   conferencing
                 </li>
@@ -215,18 +221,22 @@
             <button class="btn primary-btn bg-blue">Get started</button>
           </div>
         </div>
-        <p>
+        <p class="text-center">
           All prices are in USD and charged per month with applicable taxes
           added at checkout.
         </p>
-        <div>
-          <a class="view-features"> View features </a>
-          <svg class="arrow-icon">
-            <use xlink:href="images/arrowSS.svg#arrow"></use>
-          </svg>
+        <div class="text-center pricing-section__footer">
+          <a href="#" class="view-features">
+            View features
+            <svg class="arrow-icon">
+              <use xlink:href="images/arrowSS.svg#arrow"></use></svg
+          ></a>
         </div>
       </section>
-      <div class="divider"></div>
+
+      <div class="container">
+        <div class="divider section-divider" data-type="light"></div>
+      </div>
 
       <!-- FAQ SECTION -->
       <section class="faq-section bg-light container">
