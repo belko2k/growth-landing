@@ -554,7 +554,11 @@ body {
 /* FOOTER */
 
 .primary-footer {
-  padding-top: 4rem;
+  padding-block: 4rem 1.5rem;
+}
+
+.primary-footer .primary-footer__content {
+  margin-top: 1.5rem;
 }
 
 .primary-footer .newsletter {
@@ -594,6 +598,51 @@ body {
 
 .primary-footer .newsletter .primary-footer__form input:focus {
   outline: 2px solid var(--clr-primary-400);
+}
+
+.primary-footer .primary-footer__content .primary-footer__links h5 {
+  color: var(--clr-neutral-300);
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-500);
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.primary-footer ul {
+  list-style: none;
+}
+
+.primary-footer
+  .primary-footer__content
+  .primary-footer__links
+  li:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.primary-footer .primary-footer__content .primary-footer__links li {
+  color: var(--clr-neutral-400);
+  font-weight: var(--fw-regular);
+}
+
+.primary-footer .primary-footer__content .primary-footer__links a {
+  text-decoration: none;
+  color: var(--clr-neutral-400);
+}
+
+.primary-footer .primary-footer__content .primary-footer__links a:hover {
+  text-decoration: none;
+  color: var(--clr-neutral-300);
+}
+
+.primary-footer .social-list {
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.primary-footer .copyright {
+  margin-top: 1.5rem;
+  color: var(--clr-neutral-400);
+  font-size: var(--fs-100);
 }
 
 /* UTILITY CLASSES */
