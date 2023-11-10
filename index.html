@@ -360,15 +360,17 @@
     </main>
     <footer class="primary-footer bg-dark">
       <div class="container">
-        <img src="images/logo-white.png" alt="Growth logo" />
+        <div class="primary-footer__logo">
+          <img src="images/logo-white.png" alt="Growth logo" />
+        </div>
         <div class="primary-footer__content">
           <div class="newsletter">
-            <p>Subscribe to newsletter</p>
-            <p>
+            <p class="newsletter__title">Subscribe to newsletter</p>
+            <p class="newsletter__desc">
               Subscribe now to receive tips on how to take your business to the
               next level.
             </p>
-            <form class="primary-footer__form">
+            <form class="primary-footer__form flex">
               <input type="email" placeholder="Enter your email" />
               <button class="btn primary-btn-sm bg-blue">Subscribe</button>
             </form>
