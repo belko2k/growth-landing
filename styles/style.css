@@ -6,6 +6,7 @@
   --clr-neutral-100: hsl(0, 0%, 100%, 100%);
   --clr-neutral-150: hsl(0, 0%, 98%, 100%);
   --clr-neutral-200: hsl(0, 0%, 96%, 100%);
+  --clr-neutral-225: hsl(240, 10%, 96%, 100%);
   --clr-neutral-250: hsl(220, 13%, 91%, 100%);
   --clr-neutral-300: hsl(225, 6%, 88%, 100%);
   --clr-neutral-400: hsl(189, 6%, 75%, 100%);
@@ -36,7 +37,7 @@
   --fs-testimonial-quote: var(--fs-400);
   --fs-testimonial-author: var(--fs-400);
   --fs-plan-month: var(--fs-400);
-  --fs-accordion-question: var(--fs-500);
+  --fs-faq-question: var(--fs-500);
 }
 
 @media (min-width: 1000px) {
@@ -306,7 +307,6 @@ body {
 }
 
 .pricing-section .pricing .plan > *:not(:first-child):not(.divider) {
-  /* gap: 3.25rem; */
   margin-top: 2rem;
 }
 
@@ -335,7 +335,6 @@ body {
 }
 
 .pricing-section .pricing .plan .plan__price {
-  display: flex;
   align-items: baseline;
 }
 
@@ -446,7 +445,78 @@ body {
 /* section divider */
 
 .section-divider[data-type='light'] {
-  margin-block: 4rem;
+  margin-top: 4rem;
+}
+
+/* FAQ SECTION */
+
+.faq-section {
+  padding-block: 4rem;
+}
+
+.faq-section .secondary-heading[data-lenght='full-text'] {
+  display: none;
+}
+
+.faq-section .tabs {
+  display: inline-flex;
+  gap: 0.25rem;
+  list-style: none;
+  background-color: var(--clr-neutral-225);
+  margin-block: 1.5rem 2.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.faq-section .tabs .tab {
+  font-weight: var(--fw-medium);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.faq-section .tabs .tab.active {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+}
+
+.faq-section .tabs .tab:not(.active):hover {
+  background-color: var(--clr-primary-100);
+}
+
+.faq-section .faq-content {
+  margin-inline: auto;
+  max-width: 824px;
+}
+
+.faq-section .faq-content .faq-question {
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.faq-section .faq-content .faq-question h4 {
+  font-size: var(--fs-faq-question);
+  font-weight: var(--fw-regular);
+  letter-spacing: -1px;
+}
+
+@media (min-width: 1000px) {
+  .faq-section .secondary-heading[data-lenght='short-text'] {
+    display: none;
+  }
+
+  .faq-section .secondary-heading[data-lenght='full-text'] {
+    display: block;
+  }
+
+  .faq-section .tabs {
+    gap: 0.5rem;
+    padding: 0.5rem 0.8125rem 0.5rem 0.5rem;
+  }
+
+  .faq-section .tabs .tab {
+    padding: 0.75rem 1.5rem;
+  }
 }
 
 /* UTILITY CLASSES */
