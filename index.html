@@ -36,15 +36,26 @@
             <img src="images/logo-black.png" alt="Growth logo" />
           </div>
           <nav>
-            <ul role="list" class="primary-navigation flex">
+            <ul
+              id="primary-navigation"
+              class="primary-navigation"
+              data-visible="false"
+            >
               <li><a href="">Features</a></li>
               <li><a href="">About Us</a></li>
               <li><a href="">Blog</a></li>
               <li>
-                <button class="btn secondary-btn-sm">Log in</button>
+                <button class="btn secondary-btn-sm" data-role="login">
+                  Log in
+                </button>
               </li>
             </ul>
           </nav>
+          <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <span class="sr-only" aria-expanded="false">Menu</span>
+          </button>
         </div>
       </div>
     </header>

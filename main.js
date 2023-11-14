@@ -1,6 +1,19 @@
+const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+const primaryNav = document.querySelector('.primary-navigation');
+
 const slider = document.querySelector('.testimonials-wrapper');
 const faqContainer = document.querySelector('.faq-content');
 
+// Stop Animations During Window Resizing 
+
+let resizeTimer;
+window.addEventListener("resize", () => {
+    document.body.classList.add("resize-animation-stopper");
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        document.body.classList.remove("resize-animation-stopper");
+    }, 400);
+});
 
 let pos = { left: 0, x: 0 };
 
@@ -84,3 +97,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// MOBILE NAV
+
+// mobileNavToggle.addEventListener('click', () => {
+//     mobileNavToggle.classList.toggle('active');
+//     primaryNav.classList.toggle('active');
+//     document.body.classList.toggle('active-nav');
+// });
+
+
+mobileNavToggle.addEventListener("click", () => {
+    const visibility = primaryNav.dataset.visible;
+
+    primaryNav.dataset.visible = visibility === "false" || visibility === null ? "true" : "false";
+    mobileNavToggle.setAttribute("aria-expanded", primaryNav.dataset.visible === "true" ? "true" : "false");
+    document.body.classList.toggle('active-nav', primaryNav.dataset.visible === "true");
+});
