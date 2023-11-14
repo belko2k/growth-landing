@@ -105,6 +105,21 @@ document.addEventListener('DOMContentLoaded', () => {
 //     document.body.classList.toggle('active-nav');
 // });
 
+// close menu on resize (if it's opened when resizing)
+function closeMenu() {
+    primaryNav.dataset.visible = "false";
+    mobileNavToggle.setAttribute("aria-expanded", "false");
+    document.body.classList.remove('active-nav');
+}
+
+window.addEventListener('resize', () => {
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth >= 650) {
+        closeMenu();
+    }
+});
+
 
 mobileNavToggle.addEventListener("click", () => {
     const visibility = primaryNav.dataset.visible;
@@ -113,3 +128,14 @@ mobileNavToggle.addEventListener("click", () => {
     mobileNavToggle.setAttribute("aria-expanded", primaryNav.dataset.visible === "true" ? "true" : "false");
     document.body.classList.toggle('active-nav', primaryNav.dataset.visible === "true");
 });
+
+document.querySelectorAll('.primary-navigation li a')
+    .forEach(link => link.addEventListener('click', () => {
+        const visibility = primaryNav.dataset.visible;
+        primaryNav.dataset.visible = visibility === "true" ? "false" : "true";
+        document.body.classList.toggle('active-nav', primaryNav.dataset.visible === "true");
+
+        requestAnimationFrame(() => {
+            mobileNavToggle.setAttribute("aria-expanded", primaryNav.dataset.visible === "true" ? "true" : "false");
+        });
+    }));
