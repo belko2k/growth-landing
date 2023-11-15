@@ -81,7 +81,7 @@ body {
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
   color: var(--clr-neutral-900);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* NAVIGATION */
