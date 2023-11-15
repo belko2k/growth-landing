@@ -615,6 +615,7 @@ body {
 }
 
 .faq-section .faq-content .faq-answer p {
+  font-size: var(--fs-400);
   color: var(--clr-neutral-600);
   max-width: 70ch;
 }
