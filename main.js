@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Toggle answer
         groupAnswer.classList.toggle('open');
 
-        // Toggle data-type attribute
+        // Toggle data-type attribute for divider
         if (groupAnswer.classList.contains('open')) {
             divider.setAttribute('data-type', 'dark');
         } else {
@@ -98,12 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // MOBILE NAV
-
-// mobileNavToggle.addEventListener('click', () => {
-//     mobileNavToggle.classList.toggle('active');
-//     primaryNav.classList.toggle('active');
-//     document.body.classList.toggle('active-nav');
-// });
 
 // close menu on resize (if it's opened when resizing)
 function closeMenu() {
@@ -139,3 +133,13 @@ document.querySelectorAll('.primary-navigation li a')
             mobileNavToggle.setAttribute("aria-expanded", primaryNav.dataset.visible === "true" ? "true" : "false");
         });
     }));
+
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        entry.target.classList.toggle('show', entry.isIntersecting);
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));

@@ -50,6 +50,7 @@
   }
 }
 
+/* fixed the h4 question font size on phone landscape. The font size used to switch to 20px when landscape on phone  */
 html {
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -449,7 +450,7 @@ body {
   letter-spacing: -1px;
 }
 
-.pricing-section .pricing .plan .plan__price .hidden {
+.pricing-section .pricing .plan .plan__price p[data-hidden='true'] {
   display: none;
 }
 
@@ -541,7 +542,7 @@ body {
     margin-bottom: 1rem;
   }
 
-  .pricing-section .pricing .plan .plan__price .hidden {
+  .pricing-section .pricing .plan .plan__price p[data-hidden='true'] {
     display: block;
   }
 }
@@ -930,4 +931,18 @@ body {
 
 .italic {
   font-style: italic;
+}
+
+/* Animations */
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  /* transform: translateX(-100%); */
+  transition: all 1000ms;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  /* transform: translateX(0); */
 }
