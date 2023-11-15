@@ -226,7 +226,7 @@ body {
   width: 18px;
   height: 21px;
   stroke: var(--clr-neutral-900);
-  color: var(--clr-neutral-900);
+  color: var(--clr-neutral-900) !important;
 }
 
 .hero-section .btn-wrapper button[data-icon='camera']:hover .camera-icon {
