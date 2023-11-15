@@ -37,7 +37,6 @@
   --fs-testimonial-quote: var(--fs-400);
   --fs-testimonial-author: var(--fs-400);
   --fs-plan-month: var(--fs-400);
-  --fs-faq-question: var(--fs-500);
 }
 
 @media (min-width: 1000px) {
@@ -48,7 +47,6 @@
     --fs-testimonial-quote: var(--fs-600);
     --fs-testimonial-author: var(--fs-500);
     --fs-plan-month: var(--fs-600);
-    --fs-faq-question: var(--fs-600);
   }
 }
 
@@ -602,7 +600,7 @@ body {
 }
 
 .faq-section .faq-content .faq-question h4 {
-  font-size: var(--fs-faq-question);
+  font-size: var(--fs-500);
   font-weight: var(--fw-regular);
   letter-spacing: -1px;
   max-width: 55ch;
@@ -649,6 +647,10 @@ body {
 
   .faq-section .tabs .tab {
     padding: 0.75rem 1.5rem;
+  }
+
+  .faq-section .faq-content .faq-question h4 {
+    font-size: var(--fs-600);
   }
 
   .faq-section .faq-content .faq-answer {
