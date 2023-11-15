@@ -610,13 +610,17 @@ body {
 
 .faq-section .faq-content .faq-answer {
   display: none;
-  padding-block: 1rem 1.25rem;
+  padding-block: 0.5rem 0;
   color: var(--clr-neutral-600);
 }
 
 .faq-section .faq-content .faq-answer p {
   color: var(--clr-neutral-600);
   max-width: 70ch;
+}
+
+.faq-section .faq-content .faq-group .divider {
+  margin-top: 1.25rem;
 }
 
 .faq-group .faq-answer.open {
@@ -644,6 +648,10 @@ body {
 
   .faq-section .tabs .tab {
     padding: 0.75rem 1.5rem;
+  }
+
+  .faq-section .faq-content .faq-answer {
+    padding-block: 1rem 1.25rem;
   }
 
   .faq-section .faq-content .faq-group .divider {
