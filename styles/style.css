@@ -151,13 +151,13 @@ body {
   }
 
   .primary-navigation li a {
-    font-size: var(--fs-700);
+    font-size: var(--fs-600);
   }
 
   .primary-header button[data-role='login'] {
     color: var(--clr-neutral-100);
     background-color: var(--clr-primary-400);
-    font-size: var(--fs-700);
+    font-size: var(--fs-600);
   }
 
   .primary-header button[data-role='login']:hover {
@@ -226,6 +226,7 @@ body {
   width: 18px;
   height: 21px;
   stroke: var(--clr-neutral-900);
+  color: var(--clr-neutral-900);
 }
 
 .hero-section .btn-wrapper button[data-icon='camera']:hover .camera-icon {
