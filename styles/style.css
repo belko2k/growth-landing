@@ -440,6 +440,7 @@ body {
 }
 
 .pricing-section .pricing .plan .plan__price {
+  gap: 0.5rem;
   align-items: baseline;
 }
 
@@ -474,20 +475,20 @@ body {
 .pricing-section .pricing .plan ul {
   list-style: none;
   line-height: 1.6;
+  padding-left: 1rem;
 }
 
 .pricing-section .pricing .plan ul li {
   margin-top: 0.75rem;
+  padding-left: 0.75rem;
 }
 
-.pricing-section .pricing .plan ul li[data-icon='check-light']::before {
+.pricing-section .pricing .plan ul li[data-icon='check-light']::marker {
   content: url(../images/checkmark-dark.svg);
-  margin-right: 0.75rem;
 }
 
-.pricing-section .pricing .plan ul li[data-icon='check-dark']::before {
+.pricing-section .pricing .plan ul li[data-icon='check-dark']::marker {
   content: url(../images/checkmark-light.svg);
-  margin-right: 0.75rem;
 }
 
 .pricing-section .pricing .plan button {
@@ -539,11 +540,20 @@ body {
   }
 
   .pricing-section .pricing .plan .plan__title {
+    font-size: var(--fs-900);
     margin-bottom: 1rem;
+  }
+
+  .pricing-section .pricing .plan .plan__price p[data-type='price'] {
+    font-size: var(--fs-900);
   }
 
   .pricing-section .pricing .plan .plan__price p[data-hidden='true'] {
     display: block;
+  }
+
+  .pricing-section .pricing .plan .divider {
+    margin-top: 1.25rem;
   }
 }
 
