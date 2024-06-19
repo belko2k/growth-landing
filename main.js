@@ -137,6 +137,11 @@ document.querySelectorAll('.primary-navigation li a')
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
+
+        if (!entry.isIntersecting) {
+            return;
+        }
+
         entry.target.classList.toggle('show', entry.isIntersecting);
     });
 },
